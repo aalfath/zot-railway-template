@@ -1,0 +1,36 @@
+{
+  "distSpecVersion": "1.1.1",
+  "storage": {
+    "rootDirectory": "/var/lib/registry",
+    "gc": true,
+    "dedupe": true
+  },
+  "http": {
+    "address": "",
+    "port": "5000",
+    "realm": "zot",
+    "compat": ["docker2s2"],
+    "auth": {
+      "htpasswd": { "path": "/etc/zot/htpasswd" },
+      "failDelay": 1
+    },
+    "accessControl": {
+      "repositories": {
+        "**": {
+          "anonymousPolicy": __ANONYMOUS_POLICY__,
+          "defaultPolicy": ["read", "create", "update", "delete"]
+        }
+      },
+      "adminPolicy": {
+        "users": ["__ADMIN_USER__"],
+        "actions": ["read", "create", "update", "delete"]
+      }
+    }
+  },
+  "log": { "level": "info" },
+  "extensions": {
+    "search": { "enable": true },
+    "ui": { "enable": true },
+    "mgmt": { "enable": true }
+  }
+}
