@@ -1,5 +1,7 @@
 # Deploy and Host Zot on Railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/zot?utm_medium=integration&utm_source=button&utm_campaign=zot)
+
 Zot is a vendor-neutral, OCI-native container image registry from the CNCF. It stores Docker and OCI images, Helm charts and other OCI artifacts, and works with `docker`, `podman`, `oras`, `helm` and Kubernetes. A single binary provides the registry, a web UI, search, deduplication and garbage collection.
 
 ## About Hosting Zot
